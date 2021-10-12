@@ -139,7 +139,7 @@ public class guiapp extends javax.swing.JFrame {
         String usuario=userfield.getText();
         String clave=String.valueOf(pswdfield.getPassword());
         
-        if ((usuario.equals("test")) && (clave.compareTo("12345")==0)){
+        if ((usuario.equals("ventas")) && (clave.compareTo("12345")==0)){
            JOptionPane.showMessageDialog(null,"Bienvenido aL APP");
            app form=new app();
            form.setVisible(true);
