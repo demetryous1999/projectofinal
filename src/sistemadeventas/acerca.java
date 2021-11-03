@@ -17,6 +17,9 @@ public class acerca extends javax.swing.JDialog {
     public acerca(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("Creado por");
+        this.setResizable(false);
     }
 
     /**
@@ -31,6 +34,7 @@ public class acerca extends javax.swing.JDialog {
         Hola = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -40,29 +44,38 @@ public class acerca extends javax.swing.JDialog {
 
         jLabel2.setText("Team demetryous .inc");
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/nap-time-cleaning.gif"))); // NOI18N
+
         javax.swing.GroupLayout HolaLayout = new javax.swing.GroupLayout(Hola);
         Hola.setLayout(HolaLayout);
         HolaLayout.setHorizontalGroup(
             HolaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HolaLayout.createSequentialGroup()
-                .addGroup(HolaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(HolaLayout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(jLabel1))
-                    .addGroup(HolaLayout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(186, 186, 186))
+            .addGroup(HolaLayout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(jLabel3)
+                .addGap(0, 111, Short.MAX_VALUE))
+            .addGroup(HolaLayout.createSequentialGroup()
+                .addGap(162, 162, 162)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HolaLayout.setVerticalGroup(
             HolaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HolaLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(53, 53, 53)
                 .addComponent(jLabel1)
-                .addGap(57, 57, 57)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(jLabel3)
+                .addGap(41, 41, 41)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
+
+        repaint();
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -125,5 +138,6 @@ public class acerca extends javax.swing.JDialog {
     private javax.swing.JPanel Hola;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

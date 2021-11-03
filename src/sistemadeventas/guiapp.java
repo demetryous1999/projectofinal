@@ -42,11 +42,15 @@ public class guiapp extends javax.swing.JFrame {
         pswd = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuopciones = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         creadopor = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(350, 450));
 
-        panel1.setBackground(new java.awt.Color(0, 255, 204));
+        panel1.setBackground(java.awt.Color.lightGray);
+        panel1.setPreferredSize(new java.awt.Dimension(350, 480));
 
         loginfoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rsz_penguin.png"))); // NOI18N
 
@@ -56,7 +60,7 @@ public class guiapp extends javax.swing.JFrame {
             }
         });
 
-        loginbutton.setBackground(new java.awt.Color(0, 51, 255));
+        loginbutton.setBackground(new java.awt.Color(255, 255, 255));
         loginbutton.setText("Ingrese al Sistema");
         loginbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,8 +68,10 @@ public class guiapp extends javax.swing.JFrame {
             }
         });
 
+        user.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         user.setText("Usuario");
 
+        pswd.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         pswd.setText("Contrasena");
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
@@ -73,42 +79,48 @@ public class guiapp extends javax.swing.JFrame {
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
-                .addContainerGap(111, Short.MAX_VALUE)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addComponent(loginfoto)
-                        .addGap(102, 102, 102))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addComponent(loginbutton)
-                        .addGap(149, 149, 149))))
-            .addGroup(panel1Layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pswdfield, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
-                    .addComponent(userfield)
-                    .addComponent(pswd)
-                    .addComponent(user))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(userfield, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pswdfield, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(user)
+                            .addComponent(pswd)))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(loginfoto))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(loginbutton)))
+                .addGap(29, 75, Short.MAX_VALUE))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addContainerGap()
                 .addComponent(loginfoto)
-                .addGap(41, 41, 41)
-                .addComponent(user)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(userfield)
                 .addGap(18, 18, 18)
-                .addComponent(pswd)
+                .addComponent(user)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pswdfield, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addComponent(userfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pswd)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pswdfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(loginbutton)
-                .addGap(32, 32, 32))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         menuopciones.setText("Opciones");
+
+        jMenu1.setText("Stuff");
+
+        jMenuItem1.setText("Cosas por hacer");
+        jMenu1.add(jMenuItem1);
+
+        menuopciones.add(jMenu1);
 
         creadopor.setText("Creado por");
         creadopor.addActionListener(new java.awt.event.ActionListener() {
@@ -126,11 +138,11 @@ public class guiapp extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -204,7 +216,9 @@ public class guiapp extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem creadopor;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JButton loginbutton;
     private javax.swing.JLabel loginfoto;
     private javax.swing.JMenu menuopciones;
