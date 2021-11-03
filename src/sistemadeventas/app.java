@@ -32,63 +32,62 @@ public class app extends javax.swing.JFrame {
     private void initComponents() {
 
         panelapp = new javax.swing.JPanel();
-        Reporte = new javax.swing.JLabel();
-        ventas = new javax.swing.JLabel();
-        productos1 = new javax.swing.JLabel();
-        productos2 = new javax.swing.JLabel();
         desktop = new javax.swing.JPanel();
-        FOTO = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        breportes = new javax.swing.JButton();
+        bproductos = new javax.swing.JButton();
+        bstock = new javax.swing.JButton();
+        bventas = new javax.swing.JButton();
+        bclientes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
 
-        Reporte.setBackground(new java.awt.Color(0, 102, 255));
-        Reporte.setText("Reporte");
-
-        ventas.setBackground(new java.awt.Color(0, 102, 255));
-        ventas.setText("Ventas");
-
-        productos1.setBackground(new java.awt.Color(51, 102, 255));
-        productos1.setText("Productos");
-        productos1.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                productos1AncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-
-        productos2.setBackground(new java.awt.Color(0, 102, 255));
-        productos2.setText("Stock");
-
         desktop.setBackground(new java.awt.Color(102, 102, 102));
-
-        FOTO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FERRETERIA.jpg"))); // NOI18N
 
         javax.swing.GroupLayout desktopLayout = new javax.swing.GroupLayout(desktop);
         desktop.setLayout(desktopLayout);
         desktopLayout.setHorizontalGroup(
             desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, desktopLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(FOTO))
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         desktopLayout.setVerticalGroup(
             desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, desktopLayout.createSequentialGroup()
-                .addContainerGap(181, Short.MAX_VALUE)
-                .addComponent(FOTO)
-                .addGap(132, 132, 132))
+            .addGap(0, 505, Short.MAX_VALUE)
         );
 
-        jButton1.setText("Clientes");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        breportes.setText("Reportes");
+        breportes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                breportesActionPerformed(evt);
+            }
+        });
+
+        bproductos.setText("Productos");
+        bproductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bproductosActionPerformed(evt);
+            }
+        });
+
+        bstock.setText("Stock");
+        bstock.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bstockActionPerformed(evt);
+            }
+        });
+
+        bventas.setText("Ventas");
+        bventas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bventasActionPerformed(evt);
+            }
+        });
+
+        bclientes.setText("Clientes");
+        bclientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bclientesActionPerformed(evt);
             }
         });
 
@@ -97,30 +96,30 @@ public class app extends javax.swing.JFrame {
         panelappLayout.setHorizontalGroup(
             panelappLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelappLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(ventas, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(productos1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(productos2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(bclientes, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Reporte, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(339, Short.MAX_VALUE))
+                .addComponent(bventas, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bproductos, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bstock, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(breportes, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(desktop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelappLayout.setVerticalGroup(
             panelappLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelappLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(13, 13, 13)
                 .addGroup(panelappLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Reporte, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ventas, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(productos1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(productos2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addGap(29, 29, 29)
+                    .addComponent(bproductos, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bstock, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(breportes, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bventas, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bclientes, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
                 .addComponent(desktop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -139,17 +138,28 @@ public class app extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void productos1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_productos1AncestorAdded
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_productos1AncestorAdded
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void bclientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bclientesActionPerformed
         // TODO add your handling code here:
         clientes cl=new clientes();
         desktop.add(cl);
         cl.show();    
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_bclientesActionPerformed
+
+    private void breportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_breportesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_breportesActionPerformed
+
+    private void bstockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bstockActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bstockActionPerformed
+
+    private void bproductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bproductosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bproductosActionPerformed
+
+    private void bventasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bventasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bventasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,13 +197,12 @@ public class app extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel FOTO;
-    private javax.swing.JLabel Reporte;
+    private javax.swing.JButton bclientes;
+    private javax.swing.JButton bproductos;
+    private javax.swing.JButton breportes;
+    private javax.swing.JButton bstock;
+    private javax.swing.JButton bventas;
     private javax.swing.JPanel desktop;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel panelapp;
-    private javax.swing.JLabel productos1;
-    private javax.swing.JLabel productos2;
-    private javax.swing.JLabel ventas;
     // End of variables declaration//GEN-END:variables
 }
