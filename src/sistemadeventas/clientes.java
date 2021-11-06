@@ -46,6 +46,8 @@ public class clientes extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setTitle("REGISTRO DE CLIENTES");
+        setToolTipText("");
 
         jLabel1.setText("REGISTRO DE CLIENTES");
 
